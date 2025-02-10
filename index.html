@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEESE SURVEY</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            box-shadow: 0px 0px 10px #00ff00;
+        }
+
+        input, select, textarea {
+            width: 90%;
+            background-color: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 22px;
+        }
+
+        .radio-group {
+            text-align: left;
+            margin: 10px auto;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .radio-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHEESE SURVEY</h1>
+        <p>fill out this form... or else.</p>
+        
+        <form action="https://formsubmit.co/danubydevx@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Cheese Survey Submission!">
+            <input type="hidden" name="_captcha" value="false"> <!-- Disables captcha for a smoother experience -->
+            <input type="hidden" name="_template" value="table"> <!-- Formats the email nicely -->
+
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" placeholder="your hacker name" required>
+            
+            <label for="skill">cheese skill level:</label>
+            <select id="skill" name="skill">
+                <option>noob</option>
+                <option>average cheese person</option>
+                <option>spaghetti hater</option>
+                <option>spaghetti killer</option>
+                <option>dedicated cheese lord</option>
+            </select>
+            
+            <label for="cheeseFreq">how often do you consume cheese?</label>
+            <select id="cheeseFreq" name="cheeseFreq">
+                <option>rarely</option>
+                <option>sometimes</option>
+                <option>daily</option>
+                <option>every meal</option>
+                <option>i AM cheese</option>
+            </select>
+            
+            <label>have you ever committed cheese related crimes?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="cheeseCrime" value="yes"> yes, and i would do it again</label>
+                <label><input type="radio" name="cheeseCrime" value="no"> no, i am a lawful citizen</label>
+                <label><input type="radio" name="cheeseCrime" value="maybe"> maybe...</label>
+            </div>
+
+            <label for="favCheese">your favorite cheese type?</label>
+            <input type="text" id="favCheese" name="favCheese" placeholder="cheddar, brie, blue cheese...?">
+            
+            <label for="message">why would you like to become a cheese person:</label>
+            <textarea id="message" name="message" rows="4" placeholder="detailed reason..."></textarea>
+            
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
